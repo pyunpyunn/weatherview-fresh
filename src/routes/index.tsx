@@ -272,7 +272,7 @@ function EmptyCopy({ children }: { children: React.ReactNode }) {
   return <p className="mt-3 rounded-md bg-muted p-3 font-medium text-muted-foreground">{children}</p>;
 }
 
-function ConditionIcon({ condition }: { condition?: string }) {
+function ConditionIcon({ condition }: { condition: string | undefined }) {
   const className = "size-5";
   if (condition === "sunny") return <Sun className={className} aria-hidden="true" />;
   if (condition === "rainy") return <CloudRain className={className} aria-hidden="true" />;
